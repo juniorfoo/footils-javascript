@@ -1,0 +1,37 @@
+{
+  "name": "footils",
+  "version": "1.0.0",
+  "description": "Utility functions in Javascript",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "semistandard src/*.js",
+    "test": "jshint src/*.js && mocha ./test/index-cover.js",
+    "build": "browserify --exclude lodash src/index.js > dist/footils.js && uglifyjs -mc < dist/footils.js > dist/fooutils.min.js"
+  },
+  "devDependencies": {
+    "semistandard": "^7.0.2",
+    "browserify": "^11.0.1",
+    "express": "^4.13.3",
+    "uglify-js": "^2.4.24",
+    "jshint": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juniorfoo/footils-javascript"
+  },
+  "keywords": [
+    "foo",
+    "juniorfoo",
+    "footils",
+    "utils"
+  ],
+  "author": "Joe Cavanaugh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juniorfoo/footils-javascript/issues"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "url-parse": "^1.0.5"
+  }
+}
